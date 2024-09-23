@@ -12,10 +12,9 @@
       </div>
       <span class="fw-bold fst-italic">Loading...</span>
     </div>
-    <div v-else>
-      <h2 class="my-3">Products Page</h2>
 
-      <div class="row row-cols-1 row-cols-md-4 g-2 g-lg-3">
+    <div v-else>
+      <div class="row row-cols-1 row-cols-md-4 g-2 g-lg-3 py-5">
         <div class="col" v-for="p in products" :key="p.id">
           <ProductCard :product="p" />
         </div>
@@ -32,11 +31,13 @@ definePageMeta({
   // layout: "products",
 });
 
-const { status, data: products } = await useLazyFetch(
-  "https://fakestoreapi.com/products"
-); // fetching data
+const {
+  status,
+  error,
+  data: products,
+} = await useLazyFetch("https://fakestoreapi.com/products"); // fetching data
 
-if (!products.value) {
+if (error.value) {
   throw createError({
     statusCode: 404,
     statusMessage: "Failed to fetch products.",

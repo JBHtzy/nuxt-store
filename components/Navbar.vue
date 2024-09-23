@@ -1,7 +1,14 @@
 <template>
   <div>
+    <section class="top-txt">
+      <div class="head container">
+        <div class="head-txt">
+          <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+      </div>
+    </section>
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom p-3"
+      class="navbar navbar-expand-lg bg-body-tertiary bg-dark mb-1 p-3"
       data-bs-theme="dark"
     >
       <div class="container-fluid">

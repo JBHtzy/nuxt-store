@@ -6,7 +6,9 @@
       <Meta name="description" :content="products.description"></Meta>
     </Head>
 
-    <ProductDetails :product="products" />
+    <div class="prod-content">
+      <ProductDetails :product="products" />
+    </div>
   </div>
 </template>
 
@@ -31,3 +33,9 @@ if (!products.value) {
 //   layout: "products",
 // });
 </script>
+
+<style>
+.prod-content {
+  height: 70vh;
+}
+</style>

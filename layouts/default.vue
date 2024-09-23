@@ -7,6 +7,8 @@
       <slot />
       <!-- this is like @yield -->
     </div>
+
+    <Footer />
   </div>
 </template>
 

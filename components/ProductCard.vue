@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="card h-100 d-flex justify-content-center text-center align-items-center flex-column"
+      class="card d-flex justify-content-center text-center align-items-center flex-column p-3"
     >
       <img
         :src="product.image"
@@ -9,10 +9,7 @@
         alt="..."
       />
       <div class="card-body">
-        <!-- <h5 class="card-title">{{ product.title }}</h5>
-        <p class="card-text">Price: {{ product.price }}</p> -->
         <p class="card-text">Category: {{ product.category }}</p>
-        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         <nuxt-link :to="`/products/${product.id}`" class="btn btn-primary"
           ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
           Details</nuxt-link
@@ -27,6 +24,10 @@ const { product } = defineProps(["product"]);
 </script>
 
 <style>
+.card {
+  height: 265px;
+}
+
 .thumb {
   max-height: 120px;
   max-width: 70%;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="mt-3">
+    <header class="mt-5">
       <h2>{{ product.title }}</h2>
       <span class="fst-italic">{{ product.category }}</span>
     </header>
@@ -18,7 +18,7 @@
           <div class="card-body">
             <h3 class="card-title">{{ product.title }}</h3>
             <div class="caption-top">Description:</div>
-            <p class="card-text">
+            <p class="card-text mt-3">
               {{ product.description }}
             </p>
             <p class="card-text">
